@@ -1,0 +1,40 @@
+@import url("../../css/variables.css");
+
+#navbar {
+  z-index: 1;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+
+.navbar__grid {
+  scroll-behavior: smooth;
+}
+
+.navbar__grid__item {
+  font-size: 0.85rem;
+  margin: 0 1rem 0 1rem;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.navbar__grid__item:hover {
+  color: var(--primary);
+}
+
+.navbar__grid__item--light {
+  color: white;
+}
+
+.navbar__grid__item--dark {
+  color: black;
+  opacity: 50%;
+}
+
+.navbar__grid__item--selected {
+  color: var(--primary);
+}
