@@ -1,6 +1,6 @@
 @import url("../../css/variables.css");
 
-.header__grid__item {
+.nav__grid__item {
   font-size: 0.85rem;
   margin: 0 1rem 0 1rem;
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -9,6 +9,6 @@
   opacity: 50%;
 }
 
-.header__grid__item:hover {
+.nav__grid__item:hover {
   color: var(--primary);
 }

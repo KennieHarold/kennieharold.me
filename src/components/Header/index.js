@@ -13,9 +13,9 @@ const Header = () => {
   ];
 
   return (
-    <header id="header">
+    <nav id="nav">
       <Grid
-        id="header__grid"
+        id="nav__grid"
         container
         justify="center"
         alignItems="center"
@@ -23,15 +23,15 @@ const Header = () => {
       >
         {headerItems.map((item) => (
           <span
-            key={`header__grid__${item}`}
-            id={`header__grid__${item}`}
-            className="header__grid__item"
+            key={`nav__grid__${item}`}
+            id={`nav__grid__${item}`}
+            className="nav__grid__item"
           >
             {item}
           </span>
         ))}
       </Grid>
-    </header>
+    </nav>
   );
 };
 
