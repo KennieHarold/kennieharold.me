@@ -22,9 +22,13 @@ const Header = () => {
         direction="row"
       >
         {headerItems.map((item) => (
-          <Typography id={`header__grid__${item}`} variant="caption">
+          <span
+            key={`header__grid__${item}`}
+            id={`header__grid__${item}`}
+            className="header__grid__item"
+          >
             {item}
-          </Typography>
+          </span>
         ))}
       </Grid>
     </header>
