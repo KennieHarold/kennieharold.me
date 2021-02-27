@@ -20,3 +20,32 @@
 #about__grid__content {
   width: 100%;
 }
+
+#about__grid__content__desc {
+  height: 100%;
+}
+
+#about__grid__content__desc__img {
+  height: 200px;
+  width: 200px;
+}
+
+#about__grid__content__desc__who-am-i {
+  margin-top: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: 'Roboto', sans-serif;
+}
+
+#about__grid__content__desc__para {
+  font-size: 1.1rem;
+  text-align:justify;
+  margin-top: 10px;
+  color: var(--readable-black);
+  width: 60%;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+#about__grid__content__graph {
+  height: 100%;
+}

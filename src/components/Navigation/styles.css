@@ -31,8 +31,7 @@
 }
 
 .navbar__grid__item--dark {
-  color: black;
-  opacity: 50%;
+  color: var(--readable-black);
 }
 
 .navbar__grid__item--selected {
