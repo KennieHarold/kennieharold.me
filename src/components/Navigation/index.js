@@ -4,7 +4,7 @@ import "./styles.css";
 
 const Navigation = () => {
   const [selectedItem, setSelectedItem] = useState("home");
-  const [isLightNavBar, setIsLightNavBar] = useState(false);
+  const [isLightNavBar, setIsLightNavBar] = useState(true);
 
   const headerItems = [
     "home",
@@ -16,7 +16,6 @@ const Navigation = () => {
   ];
 
   useEffect(() => {
-    setSelectedItem("home");
     window.addEventListener("scroll", observeScrollChange);
     navbarHiglighting();
   }, []);
@@ -31,43 +30,44 @@ const Navigation = () => {
     const portfolioSectionId = document.getElementById("portfolio");
     const contactSectionId = document.getElementById("contact");
 
+    let section = "home";
+
+    const roundedY = Math.round(window.scrollY);
+
     if (
-      window.scrollY >= homeSectionId.offsetTop &&
-      window.scrollY < aboutSectionId.offsetTop
+      roundedY >= homeSectionId.offsetTop &&
+      roundedY < aboutSectionId.offsetTop
     ) {
-      setIsLightNavBar(true);
-      setSelectedItem("home");
+      section = "home";
     } else if (
-      window.scrollY >= aboutSectionId.offsetTop &&
-      window.scrollY < timelineSectionId.offsetTop
+      roundedY >= aboutSectionId.offsetTop &&
+      roundedY < timelineSectionId.offsetTop
     ) {
-      setIsLightNavBar(false);
-      setSelectedItem("about");
+      section = "about";
     } else if (
-      window.scrollY >= timelineSectionId.offsetTop &&
-      window.scrollY < skillsSectionId.offsetTop
+      roundedY >= timelineSectionId.offsetTop &&
+      roundedY < skillsSectionId.offsetTop
     ) {
-      setIsLightNavBar(false);
-      setSelectedItem("timeline");
+      section = "timeline";
     } else if (
-      window.scrollY >= skillsSectionId.offsetTop &&
-      window.scrollY < portfolioSectionId.offsetTop
+      roundedY >= skillsSectionId.offsetTop &&
+      roundedY < portfolioSectionId.offsetTop
     ) {
-      setIsLightNavBar(false);
-      setSelectedItem("skills");
+      section = "skills";
     } else if (
-      window.scrollY >= portfolioSectionId.offsetTop &&
-      window.scrollY < contactSectionId.offsetTop
+      roundedY >= portfolioSectionId.offsetTop &&
+      roundedY < contactSectionId.offsetTop
     ) {
-      setIsLightNavBar(false);
-      setSelectedItem("portfolio");
+      section = "portfolio";
     } else {
-      setIsLightNavBar(false);
-      setSelectedItem("contact");
+      section = "contact";
     }
+
+    setIsLightNavBar(section === "home" ? true : false);
+    setSelectedItem(section);
   };
 
-  const checkClassName = (item) => {
+  const renderClassNames = (item) => {
     let classNames = ["navbar__grid__item"];
 
     if (isLightNavBar) {
@@ -94,10 +94,9 @@ const Navigation = () => {
           <a
             key={`navbar__grid__${item}`}
             id={`navbar__grid__${item}`}
-            className={checkClassName(item)}
+            className={renderClassNames(item)}
             onClick={() => {
               window.scrollTo(0, document.getElementById(item).offsetTop);
-              setSelectedItem(item);
             }}
           >
             {item}

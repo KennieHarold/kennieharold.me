@@ -42,7 +42,7 @@ const About = () => {
           >
             <img id="about__grid__content__desc__img" src={ProfilePic} />
             <Typography id="about__grid__content__desc__who-am-i" variant="h5">
-              Who's this guy?
+              Who am I?
             </Typography>
             <Typography id="about__grid__content__desc__para">
               Hi, I'm currently working as a software developer for almost two
