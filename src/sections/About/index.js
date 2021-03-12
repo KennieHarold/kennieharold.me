@@ -61,22 +61,44 @@ const About = () => {
             item
             lg={6}
           >
-            <CircularProgressWithLabel
-              value={70}
-              size={125}
-              textsize={25}
-              customcolor="#FDA702"
-            />
-            <CircularProgressWithLabel
-              value={50}
-              size={125}
-              textsize={25}
-              customcolor="#55CB97"
-            />
+            <Grid container className="about__grid__content__graph__item">
+              <Grid
+                className="about__grid__content__graph__item__circles"
+                container
+                lg={3}
+              >
+                <CircularProgressWithLabel
+                  value={70}
+                  size={150}
+                  textsize={30}
+                  customcolor="#FDA702"
+                />
+              </Grid>
+              <Grid
+                className="about__grid__content__graph__item__circletexts"
+                container
+                lg={9}
+              >
+                <Typography variant="h4" style={{ justifyContent: "center", alignItems: "center", width: "100%" }}>Creativity</Typography>
+                <Typography>
+                  Accurate with innovative mindset,attentive to details while
+                  keeping in track of the fast changing trends
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Grid container>
+              <CircularProgressWithLabel
+                value={50}
+                size={150}
+                textsize={30}
+                customcolor="#55CB97"
+              />
+            </Grid>
             <CircularProgressWithLabel
               value={90}
-              size={125}
-              textsize={25}
+              size={150}
+              textsize={30}
               customcolor="#41A6E7"
             />
           </Grid>

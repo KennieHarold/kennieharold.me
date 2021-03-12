@@ -13,7 +13,15 @@ const CircularProgressWithLabel = (props) => {
         variant="determinate"
         size={props.size}
         value={100}
-        style={{ color: props.customcolor, position: "absolute", top: 0, left: 0, bottom: 0, right: 0, color: "rgba(0, 0, 0, 0.04)" }}
+        style={{
+          color: props.customcolor,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          color: "rgba(0, 0, 0, 0.04)",
+        }}
       />
       <Box
         top={0}
