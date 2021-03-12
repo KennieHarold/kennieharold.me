@@ -9,7 +9,7 @@ import Contact from "./sections/Contact";
 
 const App = () => {
   return (
-    <>
+    <div id="container">
       <Navigation />
       <Home />
       <About />
@@ -17,7 +17,7 @@ const App = () => {
       <Skills />
       <Portfolio />
       <Contact />
-    </>
+    </div>
   );
 };
 

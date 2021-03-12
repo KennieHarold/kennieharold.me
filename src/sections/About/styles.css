@@ -21,35 +21,60 @@
   width: 100%;
 }
 
-#about__grid__content__desc {
+.about__grid__content__grid {
   height: 100%;
 }
 
-#about__grid__content__desc__img {
+#about__grid__content__grid__desc {
+  width: 97.5%;
+}
+
+#about__grid__content__grid__desc__img {
   height: 200px;
   width: 200px;
 }
 
-#about__grid__content__desc__who-am-i {
+#about__grid__content__grid__desc__who-am-i {
   margin-top: 20px;
   font-weight: 700;
   color: var(--primary);
   font-family: 'Roboto', sans-serif;
 }
 
-#about__grid__content__desc__para {
+#about__grid__content__grid__desc__para {
   font-size: 1.1rem;
-  text-align:justify;
+  text-align: justify;
   margin-top: 10px;
   color: var(--readable-black);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   width: 85%;
 }
 
-#about__grid__content__graph {
-  height: 100%;
+#about__grid__content__grid__graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 97.5%;
 }
 
-.about__grid__content__graph__item__circletexts {
+.about__grid__content__grid__graph__item__contents {
   text-align: center;
+  width: 15%;
+}
+
+.about__grid__content__grid__graph__item__contents__titles {
+  width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+  color: var(--primary);
+  font-weight: bolder !important;
+}
+
+.about__grid__content__grid__graph__item__contents__captions {
+  width: 100%;
+  color: var(--readable-black);
+  font-size: 1.1rem !important;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+  padding-left: 10px;
+  padding-right: 10px;
 }
