@@ -6,6 +6,7 @@ import Timeline from "./sections/Timeline";
 import Skills from "./sections/Skills";
 import Portfolio from "./sections/Portfolio";
 import Contact from "./sections/Contact";
+import UnsupportedMedia from "./components/UnsupportedMedia";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Skills />
       <Portfolio />
       <Contact />
+      <UnsupportedMedia />
     </div>
   );
 };

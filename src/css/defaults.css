@@ -11,3 +11,20 @@ html {
   max-width: 1600px;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 1200px) {
+  #unsupported-media {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  #navbar,
+  #home,
+  #about,
+  #timeline,
+  #skills,
+  #portfolio,
+  #contact {
+    display: none !important;
+  }
+}
