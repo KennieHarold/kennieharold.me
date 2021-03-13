@@ -5,34 +5,34 @@ import ProfilePic from "../../assets/pp_300.png";
 import CircularProgressWithLabel from "../../components/CircularProgressWithLabel";
 import "./styles.css";
 
-const About = () => {
-  const graphItems = [
-    {
-      key: "about__grid__content__grid__graph__item__creativity",
-      title: "Creativity",
-      caption:
-        "Accurate with innovative mindset,attentive to details while keeping in track of the fast changing trends.",
-      circleColor: "#FDA702",
-      circleRate: 70,
-    },
-    {
-      key: "about__grid__content__grid__graph__item__skill",
-      title: "Skill",
-      caption:
-        "Two year dedicated software developer manage to earn problem solving skills with excellent time management and organizational skills.",
-      circleColor: "#55CB97",
-      circleRate: 50,
-    },
-    {
-      key: "about__grid__content__grid__graph__item__passion",
-      title: "Passion",
-      caption:
-        "Love to work with projects that gives new learnings which stimulates my curiousiy and boosts my self-esteem.",
-      circleColor: "#41A6E7",
-      circleRate: 90,
-    },
-  ];
+const graphItems = [
+  {
+    key: "about__grid__content__grid__graph__item__creativity",
+    title: "Creativity",
+    caption:
+      "Accurate with innovative mindset,attentive to details while keeping in track of the fast changing trends.",
+    circleColor: "#FDA702",
+    circleRate: 70,
+  },
+  {
+    key: "about__grid__content__grid__graph__item__skill",
+    title: "Skill",
+    caption:
+      "Two year dedicated software developer manage to earn problem solving skills with excellent time management and organizational skills.",
+    circleColor: "#55CB97",
+    circleRate: 50,
+  },
+  {
+    key: "about__grid__content__grid__graph__item__passion",
+    title: "Passion",
+    caption:
+      "Love to work with projects that gives new learnings which stimulates my curiousiy and boosts my self-esteem.",
+    circleColor: "#41A6E7",
+    circleRate: 90,
+  },
+];
 
+const About = () => {
   return (
     <section id="about">
       <Grid
@@ -102,6 +102,7 @@ const About = () => {
                   <Grid
                     className="about__grid__content__grid__graph__item__circles"
                     container
+                    item
                     lg={3}
                   >
                     <CircularProgressWithLabel
@@ -114,6 +115,7 @@ const About = () => {
                   <Grid
                     className="about__grid__content__grid__graph__item__contents"
                     container
+                    item
                     lg={9}
                   >
                     <Typography

@@ -1,0 +1,9 @@
+@import url("./variables.css");
+
+.MuiTimelineConnector-root {
+  background-color: var(--primary) !important;
+}
+
+.MuiTimelineItem-alignAlternate .MuiTimelineItem-content {
+  text-align: left !important;
+}
