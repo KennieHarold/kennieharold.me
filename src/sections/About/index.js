@@ -10,7 +10,7 @@ const graphItems = [
     key: "about__grid__content__grid__graph__item__creativity",
     title: "Creativity",
     caption:
-      "Accurate with innovative mindset,attentive to details while keeping in track of the fast changing trends.",
+      "Accurate with innovative mindset, attentive to details while keeping in track of the fast changing trends.",
     circleColor: "#FDA702",
     circleRate: 70,
   },

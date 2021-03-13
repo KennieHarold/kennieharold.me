@@ -5,7 +5,7 @@ import "./styles.css";
 
 const UnsupportedMedia = () => {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={colorTheme}>
       <Box id="unsupported-media">
         <Typography
           variant="h2"

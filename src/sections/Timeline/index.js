@@ -41,16 +41,19 @@ const useStyles = makeStyles({
 
 const timelineItems = [
   {
+    key: "timelineItem1",
     title: "BS In Computer Science",
     inst: "Garcia College of Technology, Kalibo Aklan",
     date: "June 2015 - April 2019",
   },
   {
+    key: "timelineItem2",
     title: "Software Developer",
     inst: "Stacktrek Enterprise, Iloilo City",
     date: "July 2019 - Present",
   },
   {
+    key: "timelineItem3",
     title: "Programmer",
     inst: "Outsourcing Virtual Agents",
     date: "January 2020 - June 2020",
@@ -92,7 +95,7 @@ const Timeline = () => {
           >
             <Timeline_ align="alternate">
               {timelineItems.map((timelineItem) => (
-                <TimelineItem>
+                <TimelineItem key={timelineItem.key}>
                   <TimelineSeparator>
                     <TimelineDot color="primary" />
                     <TimelineConnector color="primary" />
