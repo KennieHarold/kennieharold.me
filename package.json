@@ -7,7 +7,14 @@
     "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
+    "@iconify/icons-fa-solid": "^1.1.0",
+    "@iconify/icons-file-icons": "^1.1.4",
+    "@iconify/icons-fxemoji": "^1.1.0",
     "@iconify/icons-ic": "^1.1.3",
+    "@iconify/icons-la": "^1.1.0",
+    "@iconify/icons-logos": "^1.1.9",
+    "@iconify/icons-simple-icons": "^1.1.15",
+    "@iconify/icons-vscode-icons": "^1.1.1",
     "@iconify/react": "^1.1.4",
     "@material-ui/core": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.57",

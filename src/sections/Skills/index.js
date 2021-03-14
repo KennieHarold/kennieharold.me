@@ -1,52 +1,140 @@
 import React from "react";
-import { Grid, Box, Paper } from "@material-ui/core";
+import { Grid, Box, Paper, Typography } from "@material-ui/core";
+import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import SectionTitle from "../../components/SectionTitle";
-import "./styles.css";
 import LinearProgressWithLabel from "../../components/LinearProgressWithLabel";
+import { Icon } from "@iconify/react";
+import { colorTheme } from "../../styles/themes";
+import "./styles.css";
+import skillItems from "./skillItems";
+
+const useStyles = makeStyles({
+  skillItemPaper: {
+    width: screen.width / 2.8,
+    height: screen.height / 3.4,
+    margin: 20,
+  },
+  skillItemTitle: {
+    padding: 15,
+  },
+  skillItemTitleText: {
+    fontWeight: 700,
+  },
+  skillItemTitleIcon: {
+    fontSize: 35,
+    marginRight: 10,
+    color: "#41A6E7",
+  },
+  skillItemIconName: {
+    fontWeight: 700,
+    marginTop: 2,
+  },
+});
 
 const Skills = () => {
+  const classes = useStyles();
+
   return (
     <section id="skills">
-      <Grid
-        id="skills__grid"
-        container
-        justify="center"
-        alignItems="center"
-        direction="column"
-      >
-        <Box
-          id="skills__grid__section-title"
-          display="flex"
-          flex={1}
-          justifyContent="center"
-          alignItems="flex-end"
-        >
-          <SectionTitle
-            id="skills__grid__section-title__skills"
-            title="skills"
-          />
-        </Box>
-
-        <Box
-          id="skills__grid__content"
-          display="flex"
-          justifyContent="center"
-          alignContent="center"
+      <ThemeProvider theme={colorTheme}>
+        <Grid
+          id="skills__grid"
+          container
+          justify="center"
           alignItems="center"
-          flexWrap="wrap"
-          flex={9}
+          direction="column"
         >
-          <Paper
-            style={{
-              width: screen.width / 2.8,
-              height: screen.height / 3.4,
-              margin: 20,
-            }}
+          <Box
+            id="skills__grid__section-title"
+            display="flex"
+            flex={1}
+            justifyContent="center"
+            alignItems="flex-end"
           >
-            <LinearProgressWithLabel value={80}/>
-          </Paper>
-        </Box>
-      </Grid>
+            <SectionTitle
+              id="skills__grid__section-title__skills"
+              title="skills"
+            />
+          </Box>
+          <Box
+            id="skills__grid__content"
+            display="flex"
+            justifyContent="center"
+            alignContent="center"
+            alignItems="center"
+            flexWrap="wrap"
+            flex={9}
+          >
+            {skillItems.map((skillItem) => (
+              <Paper key={skillItem.key} className={classes.skillItemPaper}>
+                <LinearProgressWithLabel
+                  color="secondary"
+                  value={skillItem.rate}
+                />
+                <Box
+                  display="flex"
+                  height="92.3%"
+                  width="100%"
+                  flexDirection="column"
+                >
+                  <Box
+                    display="flex"
+                    flex={2}
+                    alignItems="center"
+                    className={classes.skillItemTitle}
+                  >
+                    <Icon
+                      icon={skillItem.titleIcon}
+                      className={classes.skillItemTitleIcon}
+                    />
+                    <Typography
+                      variant="h6"
+                      color="textSecondary"
+                      className={classes.skillItemTitleText}
+                    >
+                      {skillItem.title}
+                    </Typography>
+                  </Box>
+                  <Box
+                    display="flex"
+                    flex={8}
+                    justifyContent="space-evenly"
+                    alignContent="space-evenly"
+                    alignItems="center"
+                    flexWrap="wrap"
+                  >
+                    {skillItem.toolsList.map((tool) => (
+                      <Box
+                        key={tool.key}
+                        display="flex"
+                        flexDirection="column"
+                        justifyContent="center"
+                        alignItems="center"
+                      >
+                        <Icon
+                          icon={tool.icon}
+                          style={{
+                            fontSize: 50,
+                            color:
+                              tool.name === "Python-Gspread" ? "#0F9855" : null,
+                          }}
+                        />
+                        <Typography
+                          variant="caption"
+                          color="textSecondary"
+                          className={classes.skillItemIconName}
+                        >
+                          {tool.name}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
+              </Paper>
+            ))}
+          </Box>
+        </Grid>
+      </ThemeProvider>
     </section>
   );
 };

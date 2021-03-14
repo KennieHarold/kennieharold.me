@@ -31,11 +31,7 @@ const useStyles = makeStyles({
     marginBottom: "2rem",
   },
   timelineItemInst: {
-    color: "rgba(0, 0, 0, 0.6)",
     fontWeight: 700,
-  },
-  timelineItemDate: {
-    color: "rgba(0, 0, 0, 0.6)",
   },
 });
 
@@ -112,10 +108,16 @@ const Timeline = () => {
                           {timelineItem.title}
                         </Typography>
 
-                        <Typography className={classes.timelineItemInst}>
+                        <Typography
+                          className={classes.timelineItemInst}
+                          color="textSecondary"
+                        >
                           {timelineItem.inst}
                         </Typography>
-                        <Typography className={classes.timelineItemDate}>
+                        <Typography
+                          className={classes.timelineItemDate}
+                          color="textSecondary"
+                        >
                           {timelineItem.date}
                         </Typography>
                       </Box>
