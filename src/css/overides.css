@@ -1,9 +1,15 @@
 @import url("./variables.css");
 
+/* Timeline Section */
 .MuiTimelineConnector-root {
   background-color: var(--primary) !important;
 }
 
 .MuiTimelineItem-alignAlternate .MuiTimelineItem-content {
   text-align: left !important;
+}
+
+/* Skills Section */
+.MuiLinearProgress-root {
+  height: 18px !important;
 }
