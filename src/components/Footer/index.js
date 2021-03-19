@@ -92,12 +92,12 @@ const Footer = () => {
           >
             <Typography
               variant="caption"
-              style={{ color: "lightgray", marginBottom: 10 }}
+              style={{ color: "#DCDCDC", marginBottom: 5 }}
             >
               Design and created by me and Khryss Joy &#169; 2021
             </Typography>
 
-            <Typography variant="caption" style={{ color: "lightgray" }}>
+            <Typography variant="caption" style={{ color: "#DCDCDC" }}>
               Made with React and Materia-UI
             </Typography>
           </Box>
