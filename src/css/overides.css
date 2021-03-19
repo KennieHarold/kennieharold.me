@@ -18,3 +18,8 @@
 .MuiButton-containedPrimary {
   color: white !important;
 }
+
+/* Footer */
+.MuiFab-root {
+  box-shadow: none !important;
+}
