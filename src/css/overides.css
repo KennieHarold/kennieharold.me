@@ -13,3 +13,8 @@
 .MuiLinearProgress-root {
   height: 18px !important;
 }
+
+/* Contact Section */
+.MuiButton-containedPrimary {
+  color: white !important;
+}
