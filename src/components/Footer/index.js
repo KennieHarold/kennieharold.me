@@ -36,18 +36,22 @@ const useStyles = makeStyles({
 
 const linkItems = [
   {
+    key: "footer-linkedin",
     href: "https://linkedin.com/in/kennieharoldmantac",
     icon: bxlLinkedin,
   },
   {
+    key: "footer-facebook",
     href: "https://facebook.com/kennieharold",
     icon: bxlFacebook,
   },
   {
+    key: "footer-github",
     href: "https://github.com/KennieHarold",
     icon: bxlGithub,
   },
   {
+    key: "footer-email",
     href: "mailto:kennie.harold@gmail.com",
     icon: emailSolid,
   },
@@ -70,7 +74,7 @@ const Footer = () => {
         <Box id="footer__content">
           <Box display="flex" flexDirection="row">
             {linkItems.map((linkItem) => (
-              <a href={linkItem.href} target="blank">
+              <a key={linkItem.key} href={linkItem.href} target="blank">
                 <Box
                   id="footer__content__icon-container"
                   className={classes.footerIconContainer}

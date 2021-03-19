@@ -33,6 +33,10 @@ const useStyles = makeStyles({
   timelineItemInst: {
     fontWeight: 700,
   },
+  timelineItemDate: {},
+  timelineItemDesc: {
+    marginBottom: 7
+  },
 });
 
 const timelineItems = [
@@ -41,18 +45,48 @@ const timelineItems = [
     title: "BS In Computer Science",
     inst: "Garcia College of Technology, Kalibo Aklan",
     date: "June 2015 - April 2019",
+    desc: [
+      {
+        key: "timelineItem1-desc1",
+        text: "- 4th Year Vice President GCT-ITE Department"
+      }
+    ],
   },
   {
     key: "timelineItem2",
     title: "Software Developer",
     inst: "Stacktrek Enterprise, Iloilo City",
     date: "July 2019 - Present",
+    desc: [
+      {
+        key: "timelineItem2-desc1",
+        text: "- Design and build responsive and reusable visual components for mobile and web applications"
+      },
+      {
+        key: "timelineItem2-desc2",
+        text: "- Design, write, test, deploy and maintain RESTful APIs for web applications"
+      },
+      {
+        key: "timelineItem2-desc3",
+        text: "- Document test cases and write test scripts for automation testing"
+      }
+    ],
   },
   {
     key: "timelineItem3",
     title: "Programmer",
-    inst: "Outsourcing Virtual Agents",
+    inst: "Outsourcing Virtual Agents, Iloilo City",
     date: "January 2020 - June 2020",
+    desc: [
+      {
+        key: "timelineItem3-desc1",
+        text: "- Write web scraper scripts to extract house property data of a house owner"
+      },
+      {
+        key: "timelineItem3-desc2",
+        text: "- Build and maintain company's attendance system"
+      }
+    ],
   },
 ];
 
@@ -72,7 +106,7 @@ const Timeline = () => {
           <Box
             id="timeline__grid__section-title"
             display="flex"
-            flex={1}
+            flex={0.75}
             justifyContent="center"
             alignItems="flex-end"
           >
@@ -85,7 +119,7 @@ const Timeline = () => {
           <Box
             id="timeline__grid__content"
             display="flex"
-            flex={9}
+            flex={9.25}
             justifyContent="center"
             alignItems="center"
           >
@@ -120,6 +154,22 @@ const Timeline = () => {
                         >
                           {timelineItem.date}
                         </Typography>
+
+                        <Box
+                          display="flex"
+                          flexDirection="column"
+                          style={{ marginTop: 15 }}
+                        >
+                          {timelineItem.desc.map((timelineItemDesc) => (
+                            <Typography
+                              key={timelineItemDesc.key}
+                              className={classes.timelineItemDesc}
+                              color="textSecondary"
+                            >
+                              {timelineItemDesc.text}
+                            </Typography>
+                          ))}
+                        </Box>
                       </Box>
                     </Paper>
                   </TimelineContent>
