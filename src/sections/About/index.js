@@ -1,9 +1,40 @@
 import React from "react";
-import { Grid, Box, Typography } from "@material-ui/core";
+import { Grid, Box, Typography, makeStyles } from "@material-ui/core";
 import SectionTitle from "../../components/SectionTitle";
 import ProfilePic from "../../assets/pp_300.png";
 import CircularProgressWithLabel from "../../components/CircularProgressWithLabel";
 import "./styles.css";
+
+const useStyles = makeStyles({
+  aboutProfilePicture: {
+    height: 200,
+    width: 200,
+  },
+  aboutWhoAmI: {
+    marginTop: 20,
+    fontWeight: 700,
+    fontFamily: "Roboto, sans-serif",
+  },
+  aboutDesc: {
+    fontSize: "1.1rem",
+    textAlign: "justify",
+    marginTop: 10,
+    fontFamily: "Open Sans, Arial, Helvetica, sans-serif",
+    width: "85%",
+  },
+  aboutCircleTitles: {
+    width: "100%",
+    fontFamily: "Roboto, sans-serif !important",
+    fontWeight: "bolder !important",
+  },
+  aboutCircleCaptions: {
+    width: "100%",
+    fontSize: "1.1rem !important",
+    fontFamily: "Open Sans, Arial, Helvetica, sans-serif !important",
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
+});
 
 const graphItems = [
   {
@@ -33,6 +64,8 @@ const graphItems = [
 ];
 
 const About = () => {
+  const classes = useStyles();
+
   return (
     <section id="about">
       <Grid
@@ -66,17 +99,15 @@ const About = () => {
               alignItems="center"
               flexDirection="column"
             >
-              <img
-                id="about__grid__content__grid__desc__img"
-                src={ProfilePic}
-              />
+              <img className={classes.aboutProfilePicture} src={ProfilePic} />
               <Typography
-                id="about__grid__content__grid__desc__who-am-i"
+                className={classes.aboutWhoAmI}
                 variant="h5"
+                color="primary"
               >
                 Who am I?
               </Typography>
-              <Typography id="about__grid__content__grid__desc__para">
+              <Typography className={classes.aboutDesc} color="textSecondary">
                 Hi, I'm currently working as a software developer for almost two
                 years. I'm assigned to a mobile-based project where I do
                 frontend, backend, and operations. Most of my tasks are building
@@ -91,20 +122,16 @@ const About = () => {
             justify="flex-end"
             lg={6}
           >
-            <Box id="about__grid__content__grid__graph">
+            <Box
+              id="about__grid__content__grid__graph"
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-evenly"
+              alignItems="center"
+            >
               {graphItems.map((graphItem) => (
-                <Grid
-                  key={graphItem.key}
-                  container
-                  id={graphItem.key}
-                  className="about__grid__content__grid__graph__item"
-                >
-                  <Grid
-                    className="about__grid__content__grid__graph__item__circles"
-                    container
-                    item
-                    lg={3}
-                  >
+                <Grid key={graphItem.key} container id={graphItem.key}>
+                  <Grid container item lg={3}>
                     <CircularProgressWithLabel
                       value={graphItem.circleRate}
                       size={150}
@@ -112,19 +139,18 @@ const About = () => {
                       customcolor={graphItem.circleColor}
                     />
                   </Grid>
-                  <Grid
-                    className="about__grid__content__grid__graph__item__contents"
-                    container
-                    item
-                    lg={9}
-                  >
+                  <Grid container item lg={9} style={{ textAlign: "center" }}>
                     <Typography
-                      className="about__grid__content__grid__graph__item__contents__titles"
+                      className={classes.aboutCircleTitles}
                       variant="h4"
+                      color="primary"
                     >
                       {graphItem.title}
                     </Typography>
-                    <Typography className="about__grid__content__grid__graph__item__contents__captions">
+                    <Typography
+                      className={classes.aboutCircleCaptions}
+                      color="textSecondary"
+                    >
                       {graphItem.caption}
                     </Typography>
                   </Grid>
