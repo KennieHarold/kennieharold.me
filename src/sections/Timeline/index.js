@@ -42,13 +42,17 @@ const useStyles = makeStyles({
 const timelineItems = [
   {
     key: "timelineItem1",
-    title: "BS In Computer Science",
-    inst: "Garcia College of Technology, Kalibo Aklan",
-    date: "June 2015 - April 2019",
+    title: "Programmer",
+    inst: "Outsourcing Virtual Agents, Iloilo City",
+    date: "January 2020 - June 2020",
     desc: [
       {
         key: "timelineItem1-desc1",
-        text: "- 4th Year Vice President GCT-ITE Department"
+        text: "- Write web scraper scripts to extract house property data of a house owner"
+      },
+      {
+        key: "timelineItem1-desc2",
+        text: "- Build and maintain company's attendance system"
       }
     ],
   },
@@ -74,17 +78,13 @@ const timelineItems = [
   },
   {
     key: "timelineItem3",
-    title: "Programmer",
-    inst: "Outsourcing Virtual Agents, Iloilo City",
-    date: "January 2020 - June 2020",
+    title: "BS In Computer Science",
+    inst: "Garcia College of Technology, Kalibo Aklan",
+    date: "June 2015 - April 2019",
     desc: [
       {
         key: "timelineItem3-desc1",
-        text: "- Write web scraper scripts to extract house property data of a house owner"
-      },
-      {
-        key: "timelineItem3-desc2",
-        text: "- Build and maintain company's attendance system"
+        text: "- 4th Year Vice President GCT-ITE Department"
       }
     ],
   },
