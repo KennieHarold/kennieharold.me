@@ -5,7 +5,7 @@
   height: 120vh;
   justify-content: center;
   align-items: flex-end;
-  background-color: var(--body);
+  background-color: var(--sub-body);
 }
 
 #timeline__grid {

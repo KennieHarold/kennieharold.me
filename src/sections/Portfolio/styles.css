@@ -6,7 +6,7 @@
   height: 100vh;
   justify-content: center;
   align-items: flex-end;
-  background-color: var(--body);
+  background-color: var(--sub-body);
 }
 
 #portfolio__grid {
