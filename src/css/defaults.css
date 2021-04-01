@@ -31,7 +31,7 @@ html {
 }
 
 @media only screen and (max-width: 1200px) {
-  #unsupported-media {
+  /* #unsupported-media {
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -44,5 +44,5 @@ html {
   #portfolio,
   #contact {
     display: none !important;
-  }
+  } */
 }

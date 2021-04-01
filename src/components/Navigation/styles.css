@@ -7,9 +7,21 @@
   width: 100%;
   padding: 15px 0px 15px 0px;
   max-width: 1600px;
-  /* background-color: white;
+}
+
+.navbar--shadowed {
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
-  opacity: 0.9; */
+  opacity: 0.93;
+}
+
+.navbar--light {
+  background-color: var(--body) !important;
+  transition: background-color 0.4s;
+}
+
+.navbar--dark {
+  background-color: var(--cover) !important;
+  transition: background-color 0.4s;
 }
 
 .navbar__grid {

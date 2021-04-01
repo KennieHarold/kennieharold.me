@@ -4,7 +4,8 @@ import "./styles.css";
 
 const Navigation = () => {
   const [selectedItem, setSelectedItem] = useState("home");
-  const [isLightNavBar, setIsLightNavBar] = useState(true);
+  const [isHome, setIsHome] = useState(true);
+  const [isShadowedNavBar, setIsShadowedNavBar] = useState(false);
 
   const headerItems = [
     "home",
@@ -20,7 +21,10 @@ const Navigation = () => {
     navbarHiglighting();
   }, []);
 
-  const observeScrollChange = () => navbarHiglighting();
+  const observeScrollChange = () => {
+    navbarHiglighting();
+    showShadowedNavbar();
+  };
 
   const navbarHiglighting = () => {
     const homeSectionId = document.getElementById("home");
@@ -63,14 +67,56 @@ const Navigation = () => {
       section = "contact";
     }
 
-    setIsLightNavBar(section === "home" ? true : false);
+    setIsHome(section === "home" ? true : false);
     setSelectedItem(section);
   };
 
-  const renderClassNames = (item) => {
+  const showShadowedNavbar = () => {
+    const homeSectionId = document.getElementById("home");
+    const aboutSectionId = document.getElementById("about");
+    const timelineSectionId = document.getElementById("timeline");
+    const skillsSectionId = document.getElementById("skills");
+    const portfolioSectionId = document.getElementById("portfolio");
+    const contactSectionId = document.getElementById("contact");
+
+    const roundedY = Math.round(window.scrollY);
+
+    if (
+      roundedY > homeSectionId.offsetTop + 130 &&
+      roundedY < aboutSectionId.offsetTop
+    ) {
+      setIsShadowedNavBar(true);
+    } else if (
+      roundedY > aboutSectionId.offsetTop + 20 &&
+      roundedY < timelineSectionId.offsetTop
+    ) {
+      setIsShadowedNavBar(true);
+    } else if (
+      roundedY > timelineSectionId.offsetTop + 20 &&
+      roundedY < skillsSectionId.offsetTop
+    ) {
+      setIsShadowedNavBar(true);
+    } else if (
+      roundedY > skillsSectionId.offsetTop + 20 &&
+      roundedY < portfolioSectionId.offsetTop
+    ) {
+      setIsShadowedNavBar(true);
+    } else if (
+      roundedY > portfolioSectionId.offsetTop + 20 &&
+      roundedY < contactSectionId.offsetTop
+    ) {
+      setIsShadowedNavBar(true);
+    } else if (roundedY > contactSectionId.offsetTop + 20) {
+      setIsShadowedNavBar(true);
+    } else {
+      setIsShadowedNavBar(false);
+    }
+  };
+
+  const renderClassNamesForHeaderItems = (item) => {
     let classNames = ["navbar__grid__item"];
 
-    if (isLightNavBar) {
+    if (isHome) {
       classNames.push("navbar__grid__item--light");
     } else {
       classNames.push("navbar__grid__item--dark");
@@ -81,8 +127,22 @@ const Navigation = () => {
     return classNames.join(" ");
   };
 
+  const renderClassNamesForNavbar = () => {
+    let classNames = [];
+
+    if (isShadowedNavBar) {
+      classNames.push("navbar--shadowed");
+    }
+    if (isHome) {
+      classNames.push("navbar--dark");
+    } else {
+      classNames.push("navbar--light");
+    }
+    return classNames.join(" ");
+  };
+
   return (
-    <nav id="navbar">
+    <nav id="navbar" className={renderClassNamesForNavbar()}>
       <Grid
         id="navbar__grid"
         container
@@ -94,7 +154,7 @@ const Navigation = () => {
           <a
             key={`navbar__grid__${item}`}
             id={`navbar__grid__${item}`}
-            className={renderClassNames(item)}
+            className={renderClassNamesForHeaderItems(item)}
             onClick={() => {
               window.scrollTo(0, document.getElementById(item).offsetTop);
             }}
