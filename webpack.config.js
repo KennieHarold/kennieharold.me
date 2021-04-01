@@ -1,7 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require('copy-webpack-plugin');
-const path = require('path');
+const CopyPlugin = require("copy-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   entry: {
@@ -15,9 +15,16 @@ module.exports = {
       favicon: "./src/assets/favicon.png",
     }),
     new CopyPlugin({
-      patterns: [{
-        from: path.resolve(`${__dirname}/public`, 'robots.txt'), to: "robots.txt"
-      }]
+      patterns: [
+        {
+          from: path.resolve(`${__dirname}/public`, "robots.txt"),
+          to: "robots.txt",
+        },
+        {
+          from: path.resolve(`${__dirname}/public`, "media.png"),
+          to: "media.png",
+        },
+      ],
     }),
   ],
   module: {
