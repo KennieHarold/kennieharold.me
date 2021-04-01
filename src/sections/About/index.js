@@ -108,10 +108,11 @@ const About = () => {
                 Who am I?
               </Typography>
               <Typography className={classes.aboutDesc} color="textSecondary">
-                Hi, I'm currently working as a software developer for almost two
-                years. I'm assigned to a mobile-based project where I do
-                frontend, backend, and operations. Most of my tasks are building
-                web scrapers to gather data for our AI model.
+                I’m a self-motivated, passionate software developer. I love to
+                come up with innovative ideas which I can bring into service. I
+                am someone who is continually investing in self-directed
+                learning then; once I’ve defined the benchmarks, I take the
+                necessary steps to achieve those milestones.
               </Typography>
             </Box>
           </Grid>
