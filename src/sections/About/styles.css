@@ -34,3 +34,14 @@
 #about__grid__content__grid__graph {
   width: 97.5%;
 }
+
+/* Media queries (Mobile devices) */
+@media only screen and (max-width: 411px) {
+  #about__grid__content__grid__desc {
+    margin-bottom: 50px;
+  }
+  #about--circles {
+    margin-bottom: 20px;
+  }
+
+}

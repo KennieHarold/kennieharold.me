@@ -86,13 +86,16 @@ const About = () => {
         >
           <SectionTitle id="about__grid__section-title__about" title="about" />
         </Box>
-        <Box
-          id="about__grid__content"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid className="about__grid__content__grid" container item lg={6}>
+        <Grid id="about__grid__content" justify="center" container>
+          <Grid
+            className="about__grid__content__grid"
+            container
+            item
+            lg={6}
+            md={12}
+            sm={12}
+            xs={12}
+          >
             <Box
               id="about__grid__content__grid__desc"
               display="flex"
@@ -123,6 +126,9 @@ const About = () => {
             item
             justify="flex-end"
             lg={6}
+            md={12}
+            sm={12}
+            xs={12}
           >
             <Box
               id="about__grid__content__grid__graph"
@@ -133,12 +139,19 @@ const About = () => {
             >
               {graphItems.map((graphItem) => (
                 <Grid
-                  key={graphItem.key} 
+                  key={graphItem.key}
                   className={classes.aboutGraphItem}
-                  container 
+                  container
                   id={graphItem.key}
                 >
-                  <Grid container item lg={3}>
+                  <Grid
+                    id="about--circles"
+                    justify="center"
+                    alignItems="center"
+                    container
+                    item
+                    lg={3}
+                  >
                     <CircularProgressWithLabel
                       value={graphItem.circleRate}
                       size={150}
@@ -165,7 +178,7 @@ const About = () => {
               ))}
             </Box>
           </Grid>
-        </Box>
+        </Grid>
       </Grid>
     </section>
   );
