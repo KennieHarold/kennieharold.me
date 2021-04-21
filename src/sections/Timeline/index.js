@@ -48,7 +48,7 @@ const timelineItems = [
     desc: [
       {
         key: "timelineItem1-desc1",
-        text: "- Write web scraper scripts to extract house property data of a house owner"
+        text: "- Write web scrapers to extract house property data"
       },
       {
         key: "timelineItem1-desc2",
