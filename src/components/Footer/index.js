@@ -74,7 +74,7 @@ const Footer = () => {
         <Box id="footer__content">
           <Box display="flex" flexDirection="row">
             {linkItems.map((linkItem) => (
-              <a key={linkItem.key} href={linkItem.href} target="blank">
+              <a key={linkItem.key} href={linkItem.href} target="_blank">
                 <Box
                   id="footer__content__icon-container"
                   className={classes.footerIconContainer}
@@ -102,7 +102,7 @@ const Footer = () => {
             </Typography>
 
             <Typography variant="caption" style={{ color: "#DCDCDC" }}>
-              Made with React and Materia-UI
+              Made with React and Material-UI
             </Typography>
           </Box>
         </Box>
