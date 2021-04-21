@@ -22,3 +22,28 @@
 #timeline__grid__content {
   width: 90%;
 }
+
+/* Media queries (Mobile devices) */
+@media only screen and (max-width: 411px) {
+  #timeline--separator {
+    display: none;
+  }
+  .MuiTimelineItem-root {
+    display: block !important;
+  }
+  .MuiTimeline-root {
+    padding: 0px 0px 0px 0px !important;
+  }
+  .MuiTimelineContent-root {
+    padding: 0px 0px 0px 0px !important;
+  }
+  .makeStyles-timelineItemDivider-32 {
+    width: 0px !important;
+  }
+  #timeline__grid__content {
+    margin-top: -25px;
+  }
+  .makeStyles-timelineItemPaper-31 {
+    margin-bottom: 15px;
+  }
+}

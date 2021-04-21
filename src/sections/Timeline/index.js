@@ -123,7 +123,7 @@ const Timeline = () => {
             <Timeline_ align="alternate">
               {timelineItems.map((timelineItem) => (
                 <TimelineItem key={timelineItem.key}>
-                  <TimelineSeparator>
+                  <TimelineSeparator id="timeline--separator">
                     <TimelineDot color="primary" />
                     <TimelineConnector color="primary" />
                   </TimelineSeparator>
