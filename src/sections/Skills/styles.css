@@ -2,19 +2,21 @@
 
 #skills {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--body);
 }
 
 #skills__grid {
-  height: 95%;
   width: 95%;
+  margin-top: 46px;
 }
 
 #skills__grid__section-title {
   width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 #skills__grid__content {

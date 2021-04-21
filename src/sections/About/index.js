@@ -22,6 +22,9 @@ const useStyles = makeStyles({
     fontFamily: "Open Sans, Arial, Helvetica, sans-serif",
     width: "85%",
   },
+  aboutGraphItem: {
+    marginBottom: 30,
+  },
   aboutCircleTitles: {
     width: "100%",
     fontFamily: "Roboto, sans-serif !important",
@@ -78,7 +81,6 @@ const About = () => {
         <Box
           id="about__grid__section-title"
           display="flex"
-          flex={1}
           justifyContent="center"
           alignItems="flex-end"
         >
@@ -87,7 +89,6 @@ const About = () => {
         <Box
           id="about__grid__content"
           display="flex"
-          flex={9}
           justifyContent="center"
           alignItems="center"
         >
@@ -131,7 +132,12 @@ const About = () => {
               alignItems="center"
             >
               {graphItems.map((graphItem) => (
-                <Grid key={graphItem.key} container id={graphItem.key}>
+                <Grid
+                  key={graphItem.key} 
+                  className={classes.aboutGraphItem}
+                  container 
+                  id={graphItem.key}
+                >
                   <Grid container item lg={3}>
                     <CircularProgressWithLabel
                       value={graphItem.circleRate}

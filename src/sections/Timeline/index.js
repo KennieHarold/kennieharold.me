@@ -106,7 +106,6 @@ const Timeline = () => {
           <Box
             id="timeline__grid__section-title"
             display="flex"
-            flex={0.75}
             justifyContent="center"
             alignItems="flex-end"
           >
@@ -115,11 +114,9 @@ const Timeline = () => {
               title="timeline"
             />
           </Box>
-
           <Box
             id="timeline__grid__content"
             display="flex"
-            flex={9.25}
             justifyContent="center"
             alignItems="center"
           >

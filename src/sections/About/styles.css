@@ -2,19 +2,21 @@
 
 #about {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--body);
 }
 
 #about__grid {
-  height: 95%;
-  width: 95%; 
+  width: 95%;
+  margin-top: 46px;
 }
 
 #about__grid__section-title {
   width: 100%;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 #about__grid__content {

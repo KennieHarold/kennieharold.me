@@ -2,19 +2,21 @@
 
 #timeline {
   display: flex;
-  height: 120vh;
+  min-height: 100vh;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--body);
 }
 
 #timeline__grid {
-  height: 95%;
   width: 95%;
+  margin-top: 46px;
 }
 
 #timeline__grid__section-title {
   width: 100%;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 #timeline__grid__content {
