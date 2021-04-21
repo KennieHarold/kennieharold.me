@@ -30,7 +30,7 @@ html {
   background: rgb(62, 159, 222, 0.8);
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   #unsupported-media {
     display: flex !important;
     justify-content: center;
@@ -46,4 +46,4 @@ html {
   #footer {
     display: none !important;
   }
-}
+} */

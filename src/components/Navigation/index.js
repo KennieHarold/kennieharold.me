@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from "@material-ui/core";
 import "./styles.css";
+import MobileNavbar from "./MobileNavbar";
 
 const Navigation = () => {
   const [selectedItem, setSelectedItem] = useState("home");
@@ -142,28 +143,34 @@ const Navigation = () => {
   };
 
   return (
-    <nav id="navbar" className={renderClassNamesForNavbar()}>
-      <Grid
-        id="navbar__grid"
-        container
-        justify="center"
-        alignItems="center"
-        direction="row"
-      >
-        {headerItems.map((item) => (
-          <a
-            key={`navbar__grid__${item}`}
-            id={`navbar__grid__${item}`}
-            className={renderClassNamesForHeaderItems(item)}
-            onClick={() => {
-              window.scrollTo(0, document.getElementById(item).offsetTop);
-            }}
-          >
-            {item}
-          </a>
-        ))}
-      </Grid>
-    </nav>
+    <>
+      <nav id="navbar" className={renderClassNamesForNavbar()}>
+        <Grid
+          id="navbar__grid"
+          container
+          justify="center"
+          alignItems="center"
+          direction="row"
+        >
+          {headerItems.map((item) => (
+            <a
+              key={`navbar__grid__${item}`}
+              id={`navbar__grid__${item}`}
+              className={renderClassNamesForHeaderItems(item)}
+              onClick={() => {
+                window.scrollTo(0, document.getElementById(item).offsetTop);
+              }}
+            >
+              {item}
+            </a>
+          ))}
+        </Grid>
+      </nav>
+      <MobileNavbar
+        headerItems={headerItems} 
+        isHome={isHome} 
+      />
+    </>
   );
 };
 

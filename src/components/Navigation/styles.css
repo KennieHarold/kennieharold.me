@@ -7,6 +7,17 @@
   width: 100%;
   padding: 15px 0px 15px 0px;
   max-width: 1600px;
+  display: flex;
+}
+
+#navbar--mobile {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  display: none;
+  background-color: var(--cover);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0.93;
 }
 
 .navbar--shadowed {
@@ -52,4 +63,16 @@
 
 .navbar__grid__item--selected {
   color: var(--primary);
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  #navbar {
+    display: none;
+  }
+  #navbar--mobile {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
