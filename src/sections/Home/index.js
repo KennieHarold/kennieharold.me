@@ -32,9 +32,11 @@ const Home = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <hr />
-            <Typography variant="h2">Kennie Harold</Typography>
-            <hr />
+            <hr className='home--hrs' />
+            <Typography id="home--kennie" variant="h2">
+              Kennie Harold
+            </Typography>
+            <hr className='home--hrs' />
           </Box>
           <Typography id="home__grid__item__text3" variant="h4">
             I'm a software developer and I create beautiful apps
