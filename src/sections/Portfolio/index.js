@@ -19,7 +19,6 @@ const Portfolio = () => {
           <Box
             id="portfolio__grid__section-title"
             display="flex"
-            flex={1}
             justifyContent="center"
             alignItems="flex-end"
           >
@@ -33,9 +32,9 @@ const Portfolio = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            flex={9}
           >
             <Typography
+              id="portfolio--comingsoon"
               variant="h1"
               align="center"
               style={{

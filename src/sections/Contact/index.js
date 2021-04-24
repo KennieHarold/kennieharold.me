@@ -46,7 +46,6 @@ const Contact = () => {
           <Box
             id="contact__grid__section-title"
             display="flex"
-            flex={1}
             justifyContent="center"
             alignItems="flex-end"
           >
@@ -60,7 +59,6 @@ const Contact = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            flex={9}
             flexDirection="column"
           >
             <Typography
