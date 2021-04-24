@@ -38,13 +38,16 @@
   .MuiTimelineContent-root {
     padding: 0px 0px 0px 0px !important;
   }
-  .makeStyles-timelineItemDivider-32 {
-    width: 0px !important;
-  }
   #timeline__grid__content {
     margin-top: -25px;
   }
   .makeStyles-timelineItemPaper-31 {
     margin-bottom: 15px;
+    flex-direction: column !important;
+  }
+  .makeStyles-timelineItemDivider-32 {
+    width: 100% !important;
+    height: 15px !important;
+    border-radius: 4px 4px 0 0 !important;
   }
 }

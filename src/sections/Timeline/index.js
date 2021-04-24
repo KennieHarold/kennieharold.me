@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
   timelineItemDivider: {
     backgroundColor: "#55CB97",
-    width: "10px",
+    width: 15,
     borderRadius: "4px 0 0 4px",
   },
   timelineItemContainer: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   },
   timelineItemDate: {},
   timelineItemDesc: {
-    marginBottom: 7
+    marginBottom: 7,
   },
 });
 
@@ -48,12 +48,12 @@ const timelineItems = [
     desc: [
       {
         key: "timelineItem1-desc1",
-        text: "- Write web scrapers to extract house property data"
+        text: "- Write web scrapers to extract house property data",
       },
       {
         key: "timelineItem1-desc2",
-        text: "- Build and maintain company's attendance system"
-      }
+        text: "- Build and maintain company's attendance system",
+      },
     ],
   },
   {
@@ -64,16 +64,19 @@ const timelineItems = [
     desc: [
       {
         key: "timelineItem2-desc1",
-        text: "- Design and build responsive and reusable visual components for mobile and web applications"
+        text:
+          "- Design and build responsive and reusable visual components for mobile and web applications",
       },
       {
         key: "timelineItem2-desc2",
-        text: "- Design, write, test, deploy and maintain RESTful APIs for web applications"
+        text:
+          "- Design, write, test, deploy and maintain RESTful APIs for web applications",
       },
       {
         key: "timelineItem2-desc3",
-        text: "- Document test cases and write test scripts for automation testing"
-      }
+        text:
+          "- Document test cases and write test scripts for automation testing",
+      },
     ],
   },
   {
@@ -84,8 +87,8 @@ const timelineItems = [
     desc: [
       {
         key: "timelineItem3-desc1",
-        text: "- 4th Year Vice President GCT-ITE Department"
-      }
+        text: "- 4th Year Vice President GCT-ITE Department",
+      },
     ],
   },
 ];
