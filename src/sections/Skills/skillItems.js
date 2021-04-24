@@ -1,14 +1,13 @@
-import outlineMobileFriendly from "@iconify/icons-ic/outline-mobile-friendly";
+import appIcon from '@iconify/icons-ls/app';
 import fileTypeNode from "@iconify/icons-vscode-icons/file-type-node";
 import firebaseIcon from "@iconify/icons-logos/firebase";
 import reactIcon from "@iconify/icons-logos/react";
 import reduxIcon from "@iconify/icons-logos/redux";
-import laptopCode from '@iconify/icons-la/laptop-code';
+import laptopCode from '@iconify/icons-fa-solid/laptop-code';
 import fileTypeHtml from '@iconify/icons-vscode-icons/file-type-html';
 import nginxIcon from '@iconify/icons-logos/nginx';
 import fileTypeCss from '@iconify/icons-vscode-icons/file-type-css';
-//import linodeIcon from '@iconify/icons-logos/linode';
-import sharpDesignServices from '@iconify/icons-ic/sharp-design-services';
+import designIcon from '@iconify/icons-whh/design';
 import figmaIcon from '@iconify/icons-logos/figma';
 import fileTypePhotoshop from '@iconify/icons-vscode-icons/file-type-photoshop';
 import adobeXd from '@iconify/icons-file-icons/adobe-xd';
@@ -23,7 +22,7 @@ const skillItems = [
     key: "skillItem-mobileAppDevelopment",
     title: "Mobile App Development",
     rate: 80,
-    titleIcon: outlineMobileFriendly,
+    titleIcon: appIcon,
     toolsList: [
       {
         key: "mobileAppDevelopment-tool-react",
@@ -89,7 +88,7 @@ const skillItems = [
     key: "skillItem-designing",
     title: "Designing",
     rate: 50,
-    titleIcon: sharpDesignServices,
+    titleIcon: designIcon,
     toolsList: [
       {
         key: "designing-tool-figma",

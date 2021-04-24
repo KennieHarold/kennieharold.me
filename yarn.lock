@@ -1008,20 +1008,15 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-fxemoji/-/icons-fxemoji-1.1.0.tgz#641aa5febd900aef11c9ee54e297184dfb550769"
   integrity sha512-epcQPkSvnDNhuUkI4DfQbC3193oO9RnOOkXZVNTvq8WEqFsOUxxdrsbu3io58DNPA1XXNz2ijpUWxl2tnBUZXg==
 
-"@iconify/icons-ic@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.1.3.tgz#42d66aeee5947cc4e3a2e2c455cd7d648f268385"
-  integrity sha512-7S79ssaa7ISYabY7sCXk3MuG3PX4uX8fEqufTWDBiOYDPVPvoGjBDG6Gc8KnEmIDtf+aeJ8XJcrg/bmK1tV4TQ==
-
-"@iconify/icons-la@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-la/-/icons-la-1.1.0.tgz#da00d0ed5686ff07d5addcf75a91175beb2629d3"
-  integrity sha512-9LEAEabzI2xMJzSh0wqeJmjYseWsDvN9mSZKcCoHlT+pZCJkMAwHoyoBgI7pO2Deo31VG2JiX5hx/4VyMtbE0Q==
-
 "@iconify/icons-logos@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.1.9.tgz#c203026fcae11a2db2b362f1ed6597803a0fe89f"
   integrity sha512-r+++QH2XQdcpxvdmnw8ZDNHclwZpfbWK+azeW97JwhKOhMgNykdtzKKvYGd4m9UrMiX9aK/KjPof49ttKnzXgw==
+
+"@iconify/icons-ls@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ls/-/icons-ls-1.1.0.tgz#7cc5e51951d6b06de5dbaba86d0aca8506fd0a95"
+  integrity sha512-BxM2eZhwwW+woRDXoxri872fsr0zkqzL5RqH0A848NfTnE3l/6ECA1c5VvT45SLgsC5F9dPDlG70qQH7M+s0QQ==
 
 "@iconify/icons-simple-icons@^1.1.15":
   version "1.1.15"
@@ -1032,6 +1027,11 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@iconify/icons-vscode-icons/-/icons-vscode-icons-1.1.1.tgz#7e0d8767f648b946046cb7cbd3507ef9cfd0cb1a"
   integrity sha512-QcYPQPO6uWMGC8KkDEcpij7IR3QrgyHhPlAzYpDv6c8vTdDK1pnCVkaR1cO3nuIO7tA38O8SkZrE1yrucs/6XA==
+
+"@iconify/icons-whh@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-whh/-/icons-whh-1.1.0.tgz#09949571e6df618988e2384b77d9aa3a26ecd46b"
+  integrity sha512-WFDcwp3h4CLmfj4BcRkqtSFlDs9K6OQw4GDjHVqpx7BbO22001yKP0RvJETA0iuaUzLREmdOgdXN5jbrPw6raw==
 
 "@iconify/react@^1.1.4":
   version "1.1.4"
