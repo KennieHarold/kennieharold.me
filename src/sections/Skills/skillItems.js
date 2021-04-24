@@ -132,7 +132,7 @@ const skillItems = [
       {
         key: "webScraping-tool-gspread",
         icon: googlesheetsIcon,
-        name: "Python-Gspread",
+        name: "Gspread",
       },
     ],
   },

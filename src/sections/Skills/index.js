@@ -11,11 +11,17 @@ import skillItems from "./skillItems";
 const useStyles = makeStyles({
   skillItemPaper: {
     width: screen.width / 2.8,
-    height: screen.height / 3.4,
+    minHeight: screen.height / 3.4,
     margin: 20,
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  skillIconContainer: {
+    margin: 15,
   },
   skillItemTitle: {
     padding: 15,
+    marginBottom: 15
   },
   skillItemTitleText: {
     fontWeight: 700,
@@ -73,13 +79,13 @@ const Skills = () => {
                 />
                 <Box
                   display="flex"
-                  height="92.3%"
+                  flex={1}
                   width="100%"
                   flexDirection="column"
                 >
                   <Box
                     display="flex"
-                    flex={2}
+                    //flex={1}
                     alignItems="center"
                     className={classes.skillItemTitle}
                   >
@@ -88,6 +94,7 @@ const Skills = () => {
                       className={classes.skillItemTitleIcon}
                     />
                     <Typography
+                      id="skill--title"
                       variant="h6"
                       color="textSecondary"
                       className={classes.skillItemTitleText}
@@ -97,7 +104,7 @@ const Skills = () => {
                   </Box>
                   <Box
                     display="flex"
-                    flex={8}
+                    //flex={9}
                     justifyContent="space-evenly"
                     alignContent="space-evenly"
                     alignItems="center"
@@ -105,6 +112,7 @@ const Skills = () => {
                   >
                     {skillItem.toolsList.map((tool) => (
                       <Box
+                        className={classes.skillIconContainer}
                         key={tool.key}
                         display="flex"
                         flexDirection="column"
@@ -112,11 +120,12 @@ const Skills = () => {
                         alignItems="center"
                       >
                         <Icon
+                          id="skill--icon"
                           icon={tool.icon}
                           style={{
                             fontSize: 50,
                             color:
-                              tool.name === "Python-Gspread" ? "#0F9855" : null,
+                              tool.name === "Gspread" ? "#0F9855" : null,
                           }}
                         />
                         <Typography
