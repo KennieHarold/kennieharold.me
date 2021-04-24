@@ -13,15 +13,15 @@ const useStyles = makeStyles({
     width: screen.width / 2.8,
     minHeight: screen.height / 3.4,
     margin: 20,
-    display: 'flex',
-    flexDirection: 'column'
+    display: "flex",
+    flexDirection: "column",
   },
   skillIconContainer: {
     margin: 15,
   },
   skillItemTitle: {
     padding: 15,
-    marginBottom: 15
+    marginBottom: 15,
   },
   skillItemTitleText: {
     fontWeight: 700,
@@ -85,7 +85,6 @@ const Skills = () => {
                 >
                   <Box
                     display="flex"
-                    //flex={1}
                     alignItems="center"
                     className={classes.skillItemTitle}
                   >
@@ -104,7 +103,6 @@ const Skills = () => {
                   </Box>
                   <Box
                     display="flex"
-                    //flex={9}
                     justifyContent="space-evenly"
                     alignContent="space-evenly"
                     alignItems="center"
@@ -124,8 +122,7 @@ const Skills = () => {
                           icon={tool.icon}
                           style={{
                             fontSize: 50,
-                            color:
-                              tool.name === "Gspread" ? "#0F9855" : null,
+                            color: tool.name === "Gspread" ? "#0F9855" : null,
                           }}
                         />
                         <Typography

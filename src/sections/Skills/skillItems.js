@@ -7,7 +7,7 @@ import laptopCode from '@iconify/icons-la/laptop-code';
 import fileTypeHtml from '@iconify/icons-vscode-icons/file-type-html';
 import nginxIcon from '@iconify/icons-logos/nginx';
 import fileTypeCss from '@iconify/icons-vscode-icons/file-type-css';
-import linodeIcon from '@iconify/icons-logos/linode';
+//import linodeIcon from '@iconify/icons-logos/linode';
 import sharpDesignServices from '@iconify/icons-ic/sharp-design-services';
 import figmaIcon from '@iconify/icons-logos/figma';
 import fileTypePhotoshop from '@iconify/icons-vscode-icons/file-type-photoshop';
