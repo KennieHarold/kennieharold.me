@@ -29,6 +29,10 @@
   background-color: var(--body) !important;
   transition: background-color 0.4s;
 }
+.navbar--light-2 {
+  background-color: var(--body-2) !important;
+  transition: background-color 0.4s;
+}
 
 .navbar--dark {
   background-color: var(--cover) !important;

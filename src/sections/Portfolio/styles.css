@@ -5,7 +5,7 @@
   min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--body);
+  background-color: var(--body-2);
 }
 
 #portfolio__grid {

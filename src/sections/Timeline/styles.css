@@ -5,12 +5,13 @@
   min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--body);
+  background-color: var(--body-2);
 }
 
 #timeline__grid {
   width: 95%;
   margin-top: 46px;
+  padding-bottom: 100px;
 }
 
 #timeline__grid__section-title {

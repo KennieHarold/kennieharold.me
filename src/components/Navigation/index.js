@@ -137,7 +137,11 @@ const Navigation = () => {
     if (isHome) {
       classNames.push("navbar--dark");
     } else {
-      classNames.push("navbar--light");
+      if (selectedItem === "timeline" || selectedItem === "portfolio") {
+        classNames.push("navbar--light-2");
+      } else {
+        classNames.push("navbar--light");
+      }
     }
     return classNames.join(" ");
   };
