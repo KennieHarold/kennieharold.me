@@ -72,7 +72,11 @@ const Skills = () => {
             flex={9}
           >
             {skillItems.map((skillItem) => (
-              <Paper key={skillItem.key} className={classes.skillItemPaper}>
+              <Paper
+                id="skill--paper"
+                key={skillItem.key}
+                className={classes.skillItemPaper}
+              >
                 <LinearProgressWithLabel
                   color="secondary"
                   value={skillItem.rate}

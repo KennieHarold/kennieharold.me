@@ -24,6 +24,17 @@
   width: 90%;
 }
 
+#timeline--paper {
+  display: flex;
+  flex-direction: row;
+}
+
+#timeline--divider {
+  background-color: #55CB97;
+  width: 15px;
+  border-radius: 4px 0 0 4px;
+}
+
 /* Media queries (Mobile devices) */
 @media only screen and (max-width: 411px) {
   #timeline--separator {
@@ -41,13 +52,13 @@
   #timeline__grid__content {
     margin-top: -25px;
   }
-  .makeStyles-timelineItemPaper-31 {
+  #timeline--paper {
     margin-bottom: 15px;
-    flex-direction: column !important;
+    flex-direction: column;
   }
-  .makeStyles-timelineItemDivider-32 {
-    width: 100% !important;
-    height: 15px !important;
-    border-radius: 4px 4px 0 0 !important;
+  #timeline--divider {
+    width: 100%;
+    height: 15px;
+    border-radius: 4px 4px 0 0;
   }
 }

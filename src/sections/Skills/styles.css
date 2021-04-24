@@ -33,4 +33,9 @@
   #skill--title {
     font-size: 1.15rem;
   }
+
+  #skill--paper {
+    width: 100% !important;
+    min-height: 300px !important;
+  }
 }

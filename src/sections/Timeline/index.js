@@ -14,15 +14,6 @@ import { colorTheme } from "../../styles/themes";
 import "./styles.css";
 
 const useStyles = makeStyles({
-  timelineItemPaper: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  timelineItemDivider: {
-    backgroundColor: "#55CB97",
-    width: 15,
-    borderRadius: "4px 0 0 4px",
-  },
   timelineItemContainer: {
     padding: 15,
   },
@@ -131,8 +122,15 @@ const Timeline = () => {
                     <TimelineConnector color="primary" />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <Paper className={classes.timelineItemPaper} elevation={3}>
-                      <Box className={classes.timelineItemDivider} />
+                    <Paper
+                      id="timeline--paper"
+                      //className={classes.timelineItemPaper}
+                      elevation={3}
+                    >
+                      <Box
+                        id="timeline--divider"
+                        //className={classes.timelineItemDivider}
+                      />
                       <Box className={classes.timelineItemContainer}>
                         <Typography
                           className={classes.timelineItemTitle}
