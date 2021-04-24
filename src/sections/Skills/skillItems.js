@@ -28,7 +28,7 @@ const skillItems = [
       {
         key: "mobileAppDevelopment-tool-react",
         icon: reactIcon,
-        name: "React",
+        name: "React Native",
       },
       {
         key: "mobileAppDevelopment-tool-firebase",
@@ -78,11 +78,11 @@ const skillItems = [
         icon: fileTypeCss,
         name: "CSS",
       },
-      {
-        key: "webDevelopment-tool-linode",
-        icon: linodeIcon,
-        name: "Linode",
-      },
+      // {
+      //   key: "webDevelopment-tool-linode",
+      //   icon: linodeIcon,
+      //   name: "Linode",
+      // },
     ],
   },
   {
