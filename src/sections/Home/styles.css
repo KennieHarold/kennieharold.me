@@ -19,9 +19,12 @@
 }
 
 #home__grid__item__text1,
-#home__grid__item__text2,
-#home__grid__item__text3 {
+#home__grid__item__text2 {
   color: white;
+}
+
+#home__grid__item__text3 {
+  color: #FA86C4;
 }
 
 #home__grid__item__text1 {
