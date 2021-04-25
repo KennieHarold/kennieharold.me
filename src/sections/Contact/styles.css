@@ -36,4 +36,7 @@
   #contact__grid__content__form {
     width: 90%;
   }
+  #contact--subtitle {
+    font-size: 1.25rem !important;
+  }
 }

@@ -117,11 +117,9 @@ const About = () => {
                 className={classes.aboutDesc}
                 color="textSecondary"
               >
-                I’m a self-motivated, passionate software developer. I love to
-                come up with innovative ideas which I can bring into service. I
-                am someone who is continually investing in self-directed
-                learning then; once I’ve defined the benchmarks, I take the
-                necessary steps to achieve those milestones.
+                I’m a self-motivated, passionate software developer. I'm 
+                someone who is continually investing in self-directed learning and 
+                love to come up with innovative ideas which I can bring into reality. 
               </Typography>
             </Box>
           </Grid>
