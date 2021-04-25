@@ -10,7 +10,7 @@ const LinearProgressWithLabel = (props) => {
         <LinearProgress
           variant="determinate"
           {...props}
-          style={{ borderRadius: "4px 0 0 0" }}
+          style={{ borderRadius: "10px 0 0 0" }}
         />
       </Box>
       <Box minWidth={35}>

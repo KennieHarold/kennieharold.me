@@ -23,3 +23,8 @@
 .MuiFab-root {
   box-shadow: none !important;
 }
+
+/* Paper */
+.MuiPaper-rounded {
+  border-radius: 10px !important;
+}

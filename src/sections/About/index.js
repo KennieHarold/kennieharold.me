@@ -22,9 +22,6 @@ const useStyles = makeStyles({
     fontFamily: "Open Sans, Arial, Helvetica, sans-serif",
     width: "85%",
   },
-  aboutGraphItem: {
-    marginBottom: 30,
-  },
   aboutCircleTitles: {
     width: "100%",
     fontFamily: "Roboto, sans-serif !important",
@@ -103,7 +100,11 @@ const About = () => {
               alignItems="center"
               flexDirection="column"
             >
-              <img className={classes.aboutProfilePicture} src={ProfilePic} />
+              <img
+                id="about--profile"
+                className={classes.aboutProfilePicture}
+                src={ProfilePic}
+              />
               <Typography
                 className={classes.aboutWhoAmI}
                 variant="h5"
@@ -111,7 +112,11 @@ const About = () => {
               >
                 Who am I?
               </Typography>
-              <Typography className={classes.aboutDesc} color="textSecondary">
+              <Typography
+                id="about--desc"
+                className={classes.aboutDesc}
+                color="textSecondary"
+              >
                 I’m a self-motivated, passionate software developer. I love to
                 come up with innovative ideas which I can bring into service. I
                 am someone who is continually investing in self-directed
@@ -140,9 +145,9 @@ const About = () => {
               {graphItems.map((graphItem) => (
                 <Grid
                   key={graphItem.key}
-                  className={classes.aboutGraphItem}
-                  container
                   id={graphItem.key}
+                  className="about--graph-item"
+                  container
                 >
                   <Grid
                     id="about--circles"

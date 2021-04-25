@@ -34,7 +34,7 @@
 }
 
 #home__grid__item__text2 h2 {
-  font-family: Cambria, Cochin;
+  font-family: 'Russo One', Cambria, Cochin;
   text-transform: uppercase;
   margin: 0px 10px 0px 10px;
   font-weight: 700;
@@ -46,7 +46,7 @@
 }
 
 #home__grid__item__text3 {
-  font-family: Dosis, 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Single Day', Dosis, 'Arial Narrow', Arial, sans-serif;
 }
 
 #home__grid__item__img {
@@ -62,13 +62,13 @@
 /* Media queries (Mobile devices) */
 @media only screen and (max-width: 411px) {
   #home--kennie {
-    font-size: 2.25rem;
+    font-size: 2.15rem;
   }
   .home--hrs {
     display: none;
   }
   #home__grid__item__text3 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
   #home__grid__item__img img {
     width: 175px;

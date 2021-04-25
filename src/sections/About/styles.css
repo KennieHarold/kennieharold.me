@@ -11,6 +11,7 @@
 #about__grid {
   width: 95%;
   margin-top: 46px;
+  padding-bottom: 50px;
 }
 
 #about__grid__section-title {
@@ -35,6 +36,10 @@
   width: 97.5%;
 }
 
+.about--graph-item {
+  margin-bottom: 30px;
+}
+
 /* Media queries (Mobile devices) */
 @media only screen and (max-width: 411px) {
   #about__grid__content__grid__desc {
@@ -42,5 +47,12 @@
   }
   #about--circles {
     margin-bottom: 20px;
+  }
+  /* #about--profile {
+    height: 175px;
+    width: 175px;
+  } */
+  .about--graph-item {
+    margin-bottom: 50px;
   }
 }
