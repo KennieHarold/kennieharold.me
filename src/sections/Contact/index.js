@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Grid, Box, Typography, InputBase, Button } from "@material-ui/core";
+import {
+  Grid,
+  Box,
+  Typography,
+  InputBase,
+  Button,
+  Snackbar,
+} from "@material-ui/core";
+import MuiAlert from "@material-ui/lab/Alert";
 import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import { colorTheme } from "../../styles/themes";
 import SectionTitle from "../../components/SectionTitle";
@@ -30,30 +38,63 @@ const useStyles = makeStyles({
   },
 });
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const Contact = () => {
   const [emailLoading, setEmailLoading] = useState(false);
   const [clientName, setClientName] = useState("");
   const [clientEmail, setClientEmail] = useState("");
   const [clientMessage, setClientMessage] = useState("");
+  const [openAlert, setOpenAlert] = useState(false);
+  const [alertStatus, setAlertStatus] = useState(false);
 
-  const handleSendEmail = async (url, data, callback) => {
-    console.log(clientName);
-    console.log(clientEmail);
-    console.log(clientMessage);
-    
-    // setEmailLoading(true);
+  const handleSendEmail = async () => {
+    const url = "https://api.kennieharold.me/send-email";
+    const data = {
+      text: `Client Email: ${clientEmail}\nClient Name: ${clientName}\n\n${clientMessage}`,
+    };
 
-    // await fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // }).then((response) => {
-    //   console.log(response.json());
-    // });
+    const headers = new Headers();
+    headers.append("Content-Type", "application/json");
 
-    // setEmailLoading(false);
+    setEmailLoading(true);
+
+    await fetch(url, {
+      method: "post",
+      mode: "cors",
+      headers,
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (response.status) {
+          setAlertStatus("success");
+          setOpenAlert(true);
+
+          setClientEmail("");
+          setClientName("");
+          setClientMessage("");
+        } else {
+          setAlertStatus("error");
+          setOpenAlert(true);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        setAlertStatus("error");
+        setOpenAlert(true);
+      });
+
+    setEmailLoading(false);
+  };
+
+  const handleCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenAlert(false);
   };
 
   const classes = useStyles();
@@ -149,6 +190,19 @@ const Contact = () => {
           </Box>
         </Grid>
       </ThemeProvider>
+      <Snackbar
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+        open={openAlert}
+        autoHideDuration={6000}
+        onClose={handleCloseAlert}
+      >
+        <Alert onClose={handleCloseAlert} severity={alertStatus}>
+          {alertStatus === "success" ? "Email Sent" : "Email Not Sent"}
+        </Alert>
+      </Snackbar>
     </section>
   );
 };
