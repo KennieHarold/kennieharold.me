@@ -4,9 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: {
-    app: "./src/index.js",
-  },
+  entry: ['@babel/polyfill', './src/index.js'],
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

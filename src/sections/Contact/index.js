@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Box, Typography, InputBase, Button } from "@material-ui/core";
 import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import { colorTheme } from "../../styles/themes";
@@ -31,6 +31,31 @@ const useStyles = makeStyles({
 });
 
 const Contact = () => {
+  const [emailLoading, setEmailLoading] = useState(false);
+  const [clientName, setClientName] = useState("");
+  const [clientEmail, setClientEmail] = useState("");
+  const [clientMessage, setClientMessage] = useState("");
+
+  const handleSendEmail = async (url, data, callback) => {
+    console.log(clientName);
+    console.log(clientEmail);
+    console.log(clientMessage);
+    
+    // setEmailLoading(true);
+
+    // await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // }).then((response) => {
+    //   console.log(response.json());
+    // });
+
+    // setEmailLoading(false);
+  };
+
   const classes = useStyles();
 
   return (
@@ -78,8 +103,10 @@ const Contact = () => {
               <Box className={classes.contactInputContainer}>
                 <Box className={classes.contactInputContent}>
                   <InputBase
+                    value={clientName}
                     className={classes.contactInputBase}
                     placeholder="Your name"
+                    onChange={(event) => setClientName(event.target.value)}
                   />
                 </Box>
               </Box>
@@ -87,8 +114,10 @@ const Contact = () => {
               <Box className={classes.contactInputContainer}>
                 <Box className={classes.contactInputContent}>
                   <InputBase
+                    value={clientEmail}
                     className={classes.contactInputBase}
                     placeholder="Your email"
+                    onChange={(event) => setClientEmail(event.target.value)}
                   />
                 </Box>
               </Box>
@@ -96,15 +125,19 @@ const Contact = () => {
               <Box className={classes.contactInputContainer}>
                 <Box className={classes.contactInputContent}>
                   <InputBase
+                    value={clientMessage}
                     className={classes.contactInputBase}
                     multiline
                     rows={10}
                     placeholder="Your message"
+                    onChange={(event) => setClientMessage(event.target.value)}
                   />
                 </Box>
               </Box>
 
               <Button
+                disabled={emailLoading}
+                onClick={handleSendEmail}
                 variant="contained"
                 color="primary"
                 disableElevation
