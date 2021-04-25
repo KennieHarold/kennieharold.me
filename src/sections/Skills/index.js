@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
   skillItemTitle: {
     padding: 15,
-    marginBottom: 15,
+    //marginBottom: 15,
   },
   skillItemTitleText: {
     fontWeight: 700,
@@ -91,6 +91,7 @@ const Skills = () => {
                     display="flex"
                     alignItems="center"
                     className={classes.skillItemTitle}
+                    flex={1}
                   >
                     <Icon
                       icon={skillItem.titleIcon}
@@ -111,6 +112,8 @@ const Skills = () => {
                     alignContent="space-evenly"
                     alignItems="center"
                     flexWrap="wrap"
+                    flex={9}
+                    style={{ marginTop: -20 }}
                   >
                     {skillItem.toolsList.map((tool) => (
                       <Box
