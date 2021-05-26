@@ -1,2 +1,2 @@
 # kennieharold.me
-This is my personal website built in react js
+This is my personal website built in React JS
