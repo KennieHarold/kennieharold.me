@@ -94,6 +94,7 @@ const Skills = () => {
                     flex={1}
                   >
                     <Icon
+                      id="skill--title-icon"
                       icon={skillItem.titleIcon}
                       className={classes.skillItemTitleIcon}
                     />

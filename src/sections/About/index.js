@@ -16,8 +16,8 @@ const useStyles = makeStyles({
     fontFamily: "Roboto, sans-serif",
   },
   aboutDesc: {
-    fontSize: "1.1rem",
-    textAlign: "justify",
+    fontSize: "1rem",
+    textAlign: "left",
     marginTop: 10,
     fontFamily: "Open Sans, Arial, Helvetica, sans-serif",
     width: "85%",
@@ -83,7 +83,12 @@ const About = () => {
         >
           <SectionTitle id="about__grid__section-title__about" title="about" />
         </Box>
-        <Grid id="about__grid__content" justify="center" container>
+        <Grid
+          id="about__grid__content"
+          justify="center"
+          alignItems="center"
+          container
+        >
           <Grid
             className="about__grid__content__grid"
             container
@@ -117,9 +122,30 @@ const About = () => {
                 className={classes.aboutDesc}
                 color="textSecondary"
               >
-                I’m a self-motivated, passionate software developer. I'm 
-                someone who is continually investing in self-directed learning and 
-                love to come up with innovative ideas which I can bring into reality. 
+                I remember the day at high school when I successfully run my
+                first script written in batch. It is a quiz app containing ten
+                items and saves your highest score to a file. I was fascinated
+                by how a simple notepad file can do amazing things. On that day,
+                I discovered programming and started searching on Google, "What
+                is the hardest programming language to learn?". For your
+                curiosity, Google says C++. Without hesitation, I quickly
+                started my laptop and began learning the language. It was easy
+                at first until I encountered pointers. My passion drives me to
+                chose Computer Science as my degree. I didn't waste my time
+                learning different languages and technologies. Most of my peers
+                have a collection of folders containing anime on their laptops,
+                while I have a collection of folders containing Indian tutorials
+                about programming. During that time, I created different
+                websites, mobile apps, desktop apps and joined in programming
+                competitions online. It drastically enhanced my programming
+                skills, most especially in designing algorithms. Now that I'm in
+                the tech industry, my passion still lives with me. I know
+                there's more knowledge to learn, more projects to build, and
+                more ReferenceError to debug, but it will be a happy adventure.
+                Skills: Web Development, Mobile Development Technologies: Node,
+                React, React Native, Firebase, Python Interested but not my
+                specialty: Machine/Deep learning, Blockchain P.S. I didn't use
+                C++ throughout my career :D
               </Typography>
             </Box>
           </Grid>

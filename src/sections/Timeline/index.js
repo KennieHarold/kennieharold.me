@@ -33,40 +33,45 @@ const useStyles = makeStyles({
 const timelineItems = [
   {
     key: "timelineItem1",
-    title: "Programmer",
-    inst: "Outsourcing Virtual Agents, Iloilo City",
-    date: "January 2020 - June 2020",
-    desc: [
-      {
-        key: "timelineItem1-desc1",
-        text: "- Write web scrapers to extract house property data",
-      },
-      {
-        key: "timelineItem1-desc2",
-        text: "- Build and maintain company's attendance system",
-      },
-    ],
-  },
-  {
-    key: "timelineItem2",
     title: "Software Developer",
     inst: "Stacktrek Enterprise, Iloilo City",
     date: "July 2019 - Present",
     desc: [
       {
+        key: "timelineItem1-desc1",
+        text: "- Worked in Agile-driven environment to effectively maintain project timelines and utilize available resources.",
+      },
+      {
+        key: "timelineItem1-desc2",
+        text: "- Designed responsive UI/UX layouts to meet usability and performance requirements.",
+      },
+      {
+        key: "timelineItem1-desc3",
+        text: "- Coded and maintained RESTful APIs using Node.js, Express.js for web applications and mobile applications.",
+      },
+      {
+        key: "timelineItem1-desc4",
+        text: "- Wrote web scrapers to collect dress images data for a fashion recommender system.",
+      },
+      {
+        key: "timelineItem1-desc5",
+        text: "- Wrote and executed effective tests and carried out manual testing to assess website performance.",
+      },
+    ],
+  },
+  {
+    key: "timelineItem2",
+    title: "Programmer",
+    inst: "Outsourcing Virtual Agents, Iloilo City",
+    date: "January 2020 - June 2020",
+    desc: [
+      {
         key: "timelineItem2-desc1",
-        text:
-          "- Design and build responsive and reusable visual components for mobile and web applications",
+        text: "- Wrote web scrapers to collect house owner and property data for lead generation.",
       },
       {
         key: "timelineItem2-desc2",
-        text:
-          "- Design, write, test, deploy and maintain RESTful APIs for web applications",
-      },
-      {
-        key: "timelineItem2-desc3",
-        text:
-          "- Document test cases and write test scripts for automation testing",
+        text: "- Designed, built and maintained company's payroll system",
       },
     ],
   },
