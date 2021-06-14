@@ -127,15 +127,8 @@ const Timeline = () => {
                     <TimelineConnector color="primary" />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <Paper
-                      id="timeline--paper"
-                      //className={classes.timelineItemPaper}
-                      elevation={3}
-                    >
-                      <Box
-                        id="timeline--divider"
-                        //className={classes.timelineItemDivider}
-                      />
+                    <Paper id="timeline--paper" elevation={3}>
+                      <Box id="timeline--divider" />
                       <Box className={classes.timelineItemContainer}>
                         <Typography
                           className={classes.timelineItemTitle}
